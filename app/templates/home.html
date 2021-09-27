@@ -1,0 +1,7 @@
+{% extends 'base.html' %} {% block content %}
+<ul>
+  {% for anime in animes %}
+  <li><a href="{{anime}}/">{{anime}}</a></li>
+  {% endfor %}
+</ul>
+{% endblock content %}

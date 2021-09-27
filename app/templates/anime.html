@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+<ul>
+  {% for anime, data in animes.items %} {% if name == anime %}
+  <h1>{{data.name}}</h1>
+  <br />
+  <p>Genre: {{data.genre}}</p>
+  <br />
+  <p>{{data.description}}</p>
+  <br />
+  <ul>
+    {% for character in data.characters %}
+    <li>{{character}}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}{% endfor %}
+</ul>
+{% endblock content %}
